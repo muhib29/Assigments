@@ -1,0 +1,134 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Quiz container styling */
+.quiz-container {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    padding: 25px;
+    margin: 30px auto;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header styling */
+#quiz-header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Question container styling */
+#question-container {
+    margin-bottom: 20px;
+}
+
+#question {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Button grid for answers */
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+/* Styling for answer buttons */
+.btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover:not([disabled]) {
+    background-color: #0056b3;
+    transform: translateY(-3px); /* Slight lifting effect */
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Styling for correct/incorrect answers */
+.correct {
+    background-color: #28a745 !important; /* Green for correct */
+    color: white;
+}
+
+.incorrect {
+    background-color: #dc3545 !important; /* Red for incorrect */
+    color: white;
+}
+
+/* Quiz footer (Next/Prev buttons) */
+#quiz-footer {
+    display: flex;
+    justify-content: center;
+    gap: 8px   ;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.next-btn, .prev-btn {
+    background-color: #6c757d;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.next-btn:hover, .prev-btn:hover {
+    background-color: #5a6268;
+}
+
+/* Score styling */
+#score {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .quiz-container {
+        padding: 20px;
+        width: 90%;
+    }
+
+    #question {
+        font-size: 18px;
+    }
+
+    .btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .next-btn, .prev-btn {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
